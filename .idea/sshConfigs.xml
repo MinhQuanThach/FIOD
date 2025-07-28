@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="172.81.127.49" id="3d7d1384-1cc4-4117-9566-aeeb881b96b3" keyPath="C:\Users\DELL\.ssh\id_rsa" port="29478" nameFormat="DESCRIPTIVE" username="root" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

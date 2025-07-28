@@ -1,0 +1,19 @@
+train:
+  - data/CW/images/train
+  - data/SF/images/train
+val:
+  - data/CW/images/val
+  - data/SF/images/val
+rf_train: data/RF/images/train  # Custom field for unlabeled RF
+nc: 8 # Num class
+
+# Class names
+names:
+  0: person
+  1: rider
+  2: car
+  3: bicycle
+  4: motorcycle
+  5: bus
+  6: truck
+  7: train
