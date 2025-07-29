@@ -1,10 +1,12 @@
+# Root path
+path: content/drive/MyDrive/FIOD_dataset/data
 train:
-  - data/CW/images/train
-  - data/SF/images/train
+  - CW/images/train
+  - SF/images/train
 val:
-  - data/CW/images/val
-  - data/SF/images/val
-rf_train: data/RF/images/train  # Custom field for unlabeled RF
+  - CW/images/val
+  - SF/images/val
+rf_train: RF/images/train  # Custom field for unlabeled RF
 nc: 8 # Num class
 
 # Class names
