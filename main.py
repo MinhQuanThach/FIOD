@@ -5,12 +5,12 @@ import os
 # Ensure custom module path is added
 import sys
 
-sys.path.append('/FIOD/models')
+sys.path.append('/content/FIOD/models')
 
 
 def main():
     # Load custom YOLOv8 model with fog-pass filters
-    model = YOLO('/FIOD/models/yolov8_fog.yaml')
+    model = YOLO('/content/FIOD/models/yolov8_fog.yaml')
 
     # Print model architecture to verify
     print(model.model)
