@@ -1,19 +1,24 @@
-from ultralytics import YOLO
 import torch
-import os
-
-# Ensure custom module path is added
 import sys
 
 sys.path.append('/content/FIOD/models')
+from models.custom_yolo import FogYOLO
 
 
 def main():
     # Load custom YOLOv8 model with fog-pass filters
-    model = YOLO('/content/FIOD/models/yolov8_fog.yaml')
+    model = FogYOLO('/content/FIOD/models/yolov8_fog.yaml', task='detect')
 
     # Print model architecture to verify
+    print("Model architecture:")
     print(model.model)
+
+    # Test forward pass with dummy input
+    dummy_input = torch.randn(1, 3, 1024, 2048).to(model.device)
+    with torch.no_grad():
+        outputs, fog_factors = model.model(dummy_input)
+        print("Detection outputs shape:", [o.shape for o in outputs])
+        print("Fog factors shapes:", [f.shape for f in fog_factors])
 
     # Train model (basic training, will extend with custom losses later)
     results = model.train(
