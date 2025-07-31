@@ -17,6 +17,8 @@ Examples:
     >>> os.system(f"onnxslim {f} {f} && open {f}")  # pip install onnxslim
 """
 
+from .fog_pass_filter import FogPassFilter
+
 from .block import (
     C1,
     C2,
